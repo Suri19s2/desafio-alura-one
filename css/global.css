@@ -1,0 +1,191 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.logo__alura {
+    padding: 5px;
+    margin: 0 auto 15px;
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.input-output {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.areadetexto, .mensagem {
+    width: 100%;
+    border-color: blue;
+    border: 2px solid blue;
+    border-radius: 10px;
+    color: black;
+    outline: none;
+    font-weight: 300;
+    font-size: 25px;
+    resize: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.mensagem {
+    background-image: url(/assets/icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.copiar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.botao_encriptar, .botao_desencriptar, .botao_copiar {
+    background-color: blue;
+    background: transparent;
+    color: blue;
+    border: 3px solid blue;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.botao_encriptar:hover, .botao_desencriptar:hover, .botao_copiar:hover {
+    background-color: none;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-size: large;
+}
+
+.bloco1, .bloco2, .bloco3 {
+    flex: 1;
+    text-align: center;
+    background-color: black;
+    padding: 12px;
+}
+
+.bloco1 {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.bloco3 {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.rodape {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsividade da aplicação */
+@media screen and (max-width: 1024px) {
+    .input-output {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: center;
+        width: 30px;
+    }
+
+    .botao_encriptar, .botao_desencriptar, .botao_copiar {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header img {
+        width: 200px;
+    }
+
+
+    .botao_encriptar, .botao_desencriptar, .botao_copiar {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-block {
+        height: 100px;
+        background-size: contain;
+    }
+
+    .text-block img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .bloco1, .bloco2, .bloco3 {
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
